@@ -1,0 +1,46 @@
+#include<iostream>
+#include<conio.h>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+	char package;
+	string name;
+	int a,b,c;
+	int ah;
+	
+	cout << " Please enter your name. ";
+	cin >> name;
+	cout << " Hi, " << name << " . Which package have you purchased? " << package;
+	cin >> package;
+	
+	switch ( package )
+	{
+		case 'a':
+			cout << " Enter number of hours used. \n ";
+			cin >> ah;
+			if ( ah > 10 )
+			cout << " Your Total Amount Due is: Php " << 995 + ( 20 * ( ah - 10 ) );
+			else
+			cout << " Your Total Amount Due is: Php " << 995;
+			break;
+		case 'b':
+			cout << " Enter number of hours used. \n ";
+			cin >> ah;
+			if ( ah > 20 )
+			cout << " Your Total Amount Due is: Php " << 1495 + ( 10 * ( ah - 20 ) );
+			else
+			cout << " Your Total Amount Due is: Php " << 1495;
+			break;
+		case 'c':
+			cout<< " Your Total Amount Due is: Php " << 1995;
+			break;
+		default:
+			cout << " INVALID PACKAGE! ";
+}
+	_getch();
+	return 0;
+	
+}
