@@ -1,0 +1,46 @@
+#include<iostream>
+#include<conio.h>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+	double gal,bill;
+	string name;
+	int dc,lc,cc;
+	char status;
+	
+	dc = 35;
+	lc = 20;
+	cc = 1.10;
+	
+	cout << " What is your name? ";
+	cin >> name;
+	cout << " Hello, " << name << " . Enter your water consumption for this month. ";
+	cin >> gal; 
+	cout << " Your Total Consumption is: " << gal << " gallons \n" << endl;
+	cout << " Have you paid on the 15th of this month? Enter: 'a'(yes) or 'b'(no)? " << endl; 
+	cin >> status;
+	
+	switch(status)
+	{
+		case 'a':
+			cout << " Your water bill is: Php " << dc + ( gal * cc);
+			break;
+		case 'b':
+			if ( gal > 0 )
+			cout << " Your water bill is: Php " << dc + ( ( gal * cc) + lc ) << endl;
+			else
+			cout << " Your water bill is: Php " << dc + lc << endl;
+		default:
+			cout << " INVALID STATUS! Please choose between 'a'(yes) or 'b'(no). " << endl;
+	}	
+	
+	
+	cout << " Thank you!" << endl;
+	
+	_getch();
+	return 0;
+	
+}
