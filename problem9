@@ -1,0 +1,37 @@
+#include <iostream>
+#include<conio.h>
+
+using namespace std;
+
+int rows = 0, columns = 0;
+char symbol = '*';
+void Display(int rows = 0, int columns = 0, char symbol = ('*'));
+
+int main()
+{
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    cout << "Enter the number of columns: ";
+    cin >> columns;
+	
+	cout << endl;
+	
+    Display(rows, columns, symbol);
+
+    return 0;
+}
+void Display(int rows, int columns, char symbol)
+{
+    for (int i = 1; i <= rows; i++)
+    {
+        for (int h = 1; h <= columns; h++) {
+            cout << symbol;
+        }
+        cout << endl;
+    }
+    system("pause");  
+	_getch();
+      
+}
