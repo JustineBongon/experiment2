@@ -1,0 +1,31 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main()
+{
+    int n, sum = 0;
+	code:
+    cout << "Enter a number: ";
+    cin >> n;
+    if(n==0)
+	{
+		cout<<"Thank you!";
+		return 0;
+	}
+	
+	if(n>0)
+	{
+    for (int i = 1; i <= n; i++) 
+	{
+        sum = sum + i;
+    }
+
+    cout << "The sum is = " << sum <<endl;
+	}
+	goto code;
+
+	_getch();
+    return 0;
+}
